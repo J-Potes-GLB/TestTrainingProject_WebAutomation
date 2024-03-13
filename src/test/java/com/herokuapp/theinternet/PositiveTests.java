@@ -1,7 +1,9 @@
 package com.herokuapp.theinternet;
 
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class PositiveTests {
@@ -23,13 +25,22 @@ public class PositiveTests {
         System.out.println("Page is opened");
 
         // Enter username
+        WebElement usernameInput = driver.findElement(By.id("username"));
+
         // Enter password
+        WebElement passwordInput = driver.findElement(By.name("password"));
+
         // Click login button
+        WebElement loginButton = driver.findElement(By.cssSelector("button.radius"));
 
         // Verifications
         // New url
+
         // Log out button is visible
+        WebElement logoutButton = driver.findElement(By.className("button secondary radius"));
+
         // Successful login message
+        WebElement successfulLoginMessage = driver.findElement(By.id("flash"));
 
         // Close the browser
         driver.close();
